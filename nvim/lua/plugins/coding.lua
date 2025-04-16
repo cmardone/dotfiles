@@ -25,4 +25,59 @@ return {
       })
     end,
   },
+  {
+    "folke/ts-comments.nvim",
+    event = "VeryLazy",
+    opts = {
+      signs = true,
+      sign_priority = 8,
+      keywords = {
+        FIX = { icon = " ", color = "error" },
+        TODO = { icon = " ", color = "info" },
+        HACK = { icon = " ", color = "warning" },
+        WARN = { icon = " ", color = "warning" },
+        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" }, color = "hint" },
+        NOTE = { icon = " ", color = "hint" },
+        TEST = { icon = "⏲️ ", color = "#9fbb58" },
+      },
+    },
+    event = "VeryLazy",
+  },
+  -- Surround tool
+  {
+    "echasnovski/mini.surround",
+    enabled = false,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end,
+  },
+  -- Auto pairs tool
+  {
+    "echasnovski/mini.pairs",
+    enabled = false,
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+    event = "VeryLazy",
+    opts = {
+      user_default_options = {
+        css = true,
+        mode = "background",
+        tailwind = true,
+      },
+      buftypes = { "*", "!nofile", "!nowrite", "!help" },
+    },
+  },
 }
