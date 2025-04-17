@@ -41,7 +41,6 @@ return {
         TEST = { icon = "⏲️ ", color = "#9fbb58" },
       },
     },
-    event = "VeryLazy",
   },
   -- Surround tool
   {
