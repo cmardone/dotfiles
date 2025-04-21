@@ -36,8 +36,8 @@ return {
         TODO = { icon = " ", color = "info" },
         HACK = { icon = " ", color = "warning" },
         WARN = { icon = " ", color = "warning" },
-        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" }, color = "hint" },
-        NOTE = { icon = " ", color = "hint" },
+        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" }, color = "hint" },
+        NOTE = { icon = "󱓧 ", color = "hint" },
         TEST = { icon = "⏲️ ", color = "#9fbb58" },
       },
     },
@@ -62,11 +62,11 @@ return {
     "echasnovski/mini.pairs",
     enabled = false,
   },
-  {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = true,
-  },
+  -- {
+  --   "windwp/nvim-autopairs",
+  --   event = "InsertEnter",
+  --   config = true,
+  -- },
   {
     "norcalli/nvim-colorizer.lua",
     event = "VeryLazy",

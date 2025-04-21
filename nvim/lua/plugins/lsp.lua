@@ -18,9 +18,6 @@ return {
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-    },
     config = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
