@@ -1,10 +1,5 @@
 return {
   {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    config = true,
-  },
-  {
     "monaqa/dial.nvim",
     -- stylua: ignore
     keys = {
@@ -62,11 +57,11 @@ return {
     "echasnovski/mini.pairs",
     enabled = false,
   },
-  -- {
-  --   "windwp/nvim-autopairs",
-  --   event = "InsertEnter",
-  --   config = true,
-  -- },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
   {
     "norcalli/nvim-colorizer.lua",
     event = "VeryLazy",
