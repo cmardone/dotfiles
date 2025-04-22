@@ -27,10 +27,12 @@ return {
     opts = function(_, opts)
       local LazyVim = require("lazyvim.util")
       opts.options = {
-        theme = "solarized_dark",
+        theme = "catppuccin",
         icons_enabled = true,
         globalstatus = true,
         disabled_filetypes = { statusline = { "lazy" } },
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "", right = "" },
       }
       opts.sections.lualine_c[4] = {
         LazyVim.lualine.pretty_path({
@@ -53,14 +55,17 @@ return {
       { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
-    opts = {
-      options = {
+    opts = function(_, opts)
+      if (vim.g.colors_name or ""):find("catppuccin") then
+        opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
+      end
+      opts.options = {
         mode = "tabs",
         -- separator_style = "slant",
         show_buffer_close_icons = false,
         show_close_icon = false,
-      },
-    },
+      }
+    end,
   },
   --- filename
   {
