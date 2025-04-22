@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 config.font_size = 13
 config.font = wezterm.font("MonaspiceAr Nerd Font Mono")
 config.color_scheme = "Catppuccin Macchiato"
-config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
+config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
 config.initial_cols = 160
 config.initial_rows = 58
@@ -16,7 +16,7 @@ config.macos_window_background_blur = 10
 config.enable_tab_bar = true
 
 -- tab bar
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
@@ -26,6 +26,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_prog = { "pwsh.exe", "-NoLogo" }
 	config.font_size = 10
 	config.tab_bar_at_bottom = false
+	config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
 end
 
 -- tmux
