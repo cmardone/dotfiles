@@ -11,12 +11,17 @@ return {
         opts = { skip = true },
       },
       presets = {
-
         lsp_doc_border = true,
         inc_rename = true,
+        command_palette = {
+          views = {
+            cmdline_popup = {
+              position = { row = '10%', col = '50%' },
+              size = { min_width = 60, width = 'auto', height = 'auto' },
+            },
+          },
+        },
       },
-      -- opts.presets.lsp_doc_border = true
-      -- opts.presets.inc_rename = true
     },
   },
   {
