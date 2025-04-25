@@ -1,17 +1,5 @@
 return {
   {
-    "folke/flash.nvim",
-    ---@type Flash.Config
-    opts = {
-      search = {
-        forward = true,
-        multi_window = false,
-        wrap = true,
-        incremental = true,
-      },
-    },
-  },
-  {
     "echasnovski/mini.hipatterns",
     event = "BufReadPre",
     opts = {
