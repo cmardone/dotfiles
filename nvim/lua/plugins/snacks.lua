@@ -31,9 +31,9 @@ return {
   },
   config = function()
     local wk = require 'which-key'
-    wk.add({
-      { '<leader>b', group = 'buffers', desc = '+Buffers', mode = 'n' },
-    }, { prefix = '<leader>' })
+    wk.add {
+      { '<leader>b', group = '+Buffers', desc = 'Buffers actions', mode = 'n' },
+    }
   end,
   opts = {
     dashboard = {

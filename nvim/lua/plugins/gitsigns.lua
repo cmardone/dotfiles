@@ -26,6 +26,11 @@ return {
       },
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
+        local wk = require 'which-key'
+        wk.add {
+          { '<leader>h', group = '+Git', desc = '+Git actions', mode = 'n' },
+          { '<leader>t', group = '+Blame', desc = '+Git blame actions', mode = 'n' },
+        }
 
         local function map(mode, l, r, opts)
           opts = opts or {}
