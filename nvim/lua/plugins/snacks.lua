@@ -1,8 +1,17 @@
+local header_cmd = 'cat ~/.dotfiles/art/thisisfine.cat'
+if jit.os == 'Windows' then
+  header_cmd = 'pwsh -nop -noni -c "Get-Content ~\\.dotfiles\\art\\thisisfine.cat"'
+end
 return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
-  init = function() end,
+  init = function()
+    local wk = require 'which-key'
+    wk.add {
+      { '<leader>b', group = '+Buffers', desc = 'Buffers actions', mode = 'n' },
+    }
+  end,
   keys = {
     {
       '<leader>bd',
@@ -29,29 +38,17 @@ return {
       mode = 'n',
     },
   },
-  config = function()
-    local wk = require 'which-key'
-    wk.add {
-      { '<leader>b', group = '+Buffers', desc = 'Buffers actions', mode = 'n' },
-    }
-  end,
   opts = {
     dashboard = {
-      preset = {
-        pick = nil,
-        header = [[
-                                                                             
-               ████ ██████           █████      ██                     
-              ███████████             █████                             
-              █████████ ███████████████████ ███   ███████████   
-             █████████  ███    █████████████ █████ ██████████████   
-            █████████ ██████████ █████████ █████ █████ ████ █████   
-          ███████████ ███    ███ █████████ █████ █████ ████ █████  
-         ██████  █████████████████████ ████ █████ █████ ████ ██████ 
-      ]],
-      },
       sections = {
-        { section = 'header' },
+        {
+          section = 'terminal',
+          hl = 'header',
+          cmd = header_cmd,
+          indent = 8,
+          height = 26,
+          padding = 1,
+        },
         { section = 'keys', gap = 1, padding = 1 },
         { section = 'startup' },
       },
