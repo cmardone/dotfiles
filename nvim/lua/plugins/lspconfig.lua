@@ -30,6 +30,10 @@ return {
       'saghen/blink.cmp',
     },
     config = function()
+      local wk = require 'which-key'
+      wk.add {
+        { 'gr', group = '+LSP', desc = 'LSP actions' },
+      }
       -- Brief aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
