@@ -1,6 +1,7 @@
 return {
   {
     'olimorris/codecompanion.nvim',
+    enabled = false,
     keys = {
       { '<leader>cc', '<cmd>:CodeCompanionChat Toggle<CR>', 'Toggle Code Companion chat' },
     },
@@ -31,5 +32,8 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-treesitter/nvim-treesitter',
     },
+  },
+  {
+    'github/copilot.vim',
   },
 }
