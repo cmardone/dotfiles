@@ -51,4 +51,7 @@ return {
       buftypes = { '*', '!nofile', '!nowrite', '!help' },
     },
   },
+  {
+    'mg979/vim-visual-multi',
+  },
 }
