@@ -30,7 +30,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 end
 
 -- tmux
-config.leader = { key = "l", mods = "CTRL", timeout_milliseconds = 2000 }
+config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
 	{
 		mods = "LEADER",
@@ -49,7 +49,7 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "b",
+		key = "p",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
 	{
