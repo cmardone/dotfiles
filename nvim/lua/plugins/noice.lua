@@ -4,9 +4,9 @@ return {
     'folke/noice.nvim',
     opts = {
       routes = {
-        filter = {
-          event = 'notify',
-          find = 'No information available',
+        {
+          view = 'notify',
+          filter = { event = 'msg_showmode' },
         },
         opts = { skip = true },
       },
