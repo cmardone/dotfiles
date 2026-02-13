@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "skills": {
+    "ralph-tui-prd": {
+      "source": "subsy/ralph-tui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/subsy/ralph-tui.git",
+      "skillPath": "skills/ralph-tui-prd/SKILL.md",
+      "skillFolderHash": "bf73ca88685816787c9822388db5b6519dd0848e",
+      "installedAt": "2026-01-26T16:43:03.804Z",
+      "updatedAt": "2026-01-26T23:18:08.492Z"
+    },
+    "ralph-tui-create-json": {
+      "source": "subsy/ralph-tui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/subsy/ralph-tui.git",
+      "skillPath": "skills/ralph-tui-create-json/SKILL.md",
+      "skillFolderHash": "8fffd9a90980e3b89377921156cbf70a08a1afe5",
+      "installedAt": "2026-01-26T16:43:11.790Z",
+      "updatedAt": "2026-01-26T23:18:14.223Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-01-26T23:48:53.315Z",
+      "updatedAt": "2026-01-26T23:48:53.315Z"
+    },
+    "neversight-opencode-expert": {
+      "source": "smithery/ai",
+      "sourceType": "well-known",
+      "sourceUrl": "https://smithery.ai/skills/neversight/opencode-expert/.well-known/skills/neversight-opencode-expert/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-02-13T01:17:41.058Z",
+      "updatedAt": "2026-02-13T01:17:41.058Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  }
+}
